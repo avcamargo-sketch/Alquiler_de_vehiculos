@@ -22,5 +22,7 @@
 
         <button type="submit">Registrar</button>
     </form>
+     <br><br>
+    <a href="../index.php" class="boton-volver">Volver al menú principal</a>
 </body>
 </html>

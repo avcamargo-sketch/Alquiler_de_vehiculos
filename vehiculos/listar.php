@@ -17,4 +17,5 @@ while ($row = mysqli_fetch_assoc($result)) {
           </tr>";
 }
 echo "</table>";
+echo "<br><br><a href='../index.php' class='boton-volver'>Volver al menú principal</a>";
 ?>
