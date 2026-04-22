@@ -6,11 +6,10 @@ include("includes/conexion.php");
 <head>
     <meta charset="UTF-8">
     <title>Gestor de Alquiler de Vehículos</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <h1>Gestor de Alquiler de Vehículos</h1>
-    <p>Conectado a la base de datos correctamente ✅</p>
 
     <nav>
         <ul>
