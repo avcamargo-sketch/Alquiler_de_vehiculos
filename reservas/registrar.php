@@ -1,17 +1,22 @@
 <?php
-include("../includes/conexion.php");
-
+require_once __DIR__ . '/../includes/conexion.php';
 
 $clientes = mysqli_query($conn, "SELECT id, nombre FROM clientes");
+if (!$clientes) {
+    die("Error en la consulta de clientes: " . mysqli_error($conn));
+}
 
 $vehiculos = mysqli_query($conn, "SELECT id, marca, modelo FROM vehiculos WHERE estado='disponible'");
+if (!$vehiculos) {
+    die("Error en la consulta de vehículos: " . mysqli_error($conn));
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Crear Reserva</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <h1>Crear Reserva</h1>

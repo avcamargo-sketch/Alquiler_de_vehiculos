@@ -1,7 +1,10 @@
 <?php
-include("../includes/conexion.php");
+require_once __DIR__ . '/../includes/conexion.php';
 
 $result = mysqli_query($conn, "SELECT * FROM clientes");
+if (!$result) {
+    die("Error en la consulta: " . mysqli_error($conn));
+}
 
 echo "<h1>Listado de Clientes</h1>";
 echo "<table border='1'>

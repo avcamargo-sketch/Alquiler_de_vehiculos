@@ -1,5 +1,5 @@
 <?php
-include("../includes/conexion.php");
+require_once __DIR__ . '/../includes/conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cliente_id = $_POST['cliente_id'];
@@ -12,8 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$cliente_id', '$vehiculo_id', '$fecha_inicio', '$fecha_fin')";
 
     if (mysqli_query($conn, $sql)) {
-       
-        mysqli_query($conn, "UPDATE vehiculos SET estado='alquilado' WHERE id='$vehiculo_id'");
+        if (!mysqli_query($conn, "UPDATE vehiculos SET estado='alquilado' WHERE id='$vehiculo_id'")) {
+            die("Error al actualizar estado del vehículo: " . mysqli_error($conn));
+        }
         echo "Reserva creada correctamente ✅";
     } else {
         echo "Error al crear reserva: " . mysqli_error($conn);

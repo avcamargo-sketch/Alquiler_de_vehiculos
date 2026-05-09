@@ -1,6 +1,9 @@
 <?php
-include("../includes/conexion.php");
+require_once __DIR__ . '/../includes/conexion.php';
 $result = mysqli_query($conn, "SELECT * FROM vehiculos");
+if (!$result) {
+    die("Error en la consulta de vehículos: " . mysqli_error($conn));
+}
 
 echo "<h1>Listado de Vehículos</h1>";
 echo "<table border='1'>

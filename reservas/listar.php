@@ -1,5 +1,5 @@
 <?php
-include("../includes/conexion.php");
+require_once __DIR__ . '/../includes/conexion.php';
 
 $sql = "SELECT r.id, c.nombre AS cliente, v.marca, v.modelo, r.fecha_inicio, r.fecha_fin, r.estado
         FROM reservas r
@@ -7,6 +7,9 @@ $sql = "SELECT r.id, c.nombre AS cliente, v.marca, v.modelo, r.fecha_inicio, r.f
         JOIN vehiculos v ON r.vehiculo_id = v.id";
 
 $result = mysqli_query($conn, $sql);
+if (!$result) {
+    die("Error en la consulta de reservas: " . mysqli_error($conn));
+}
 
 echo "<h1>Historial de Reservas</h1>";
 echo "<table border='1'>
