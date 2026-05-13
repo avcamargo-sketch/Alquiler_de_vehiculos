@@ -1,56 +1,166 @@
-
-body {
-    font-family: Arial, sans-serif;
-    background-image: url("resources/Fondo_menu.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/* Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    color: #222;
-    margin-bottom: 20px;
-}
-
-p {
-    text-align: center;
-    color: green;
-    font-weight: bold;
-}
-
-
-nav {
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    color: #fff;
 }
 
+/* Contenedor principal */
+.container {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px;
+    width: 95%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #00c6ff;
+    text-shadow: 0 0 12px rgba(0,198,255,0.6);
+}
+
+/* Menú principal */
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 15px 0;
 }
 
 nav ul li a {
     display: block;
-    padding: 12px 20px;
-    background-color: #0066cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
+    padding: 15px;
     text-align: center;
-    width: 250px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 nav ul li a:hover {
-    background-color: #004c99;
+    transform: translateY(-4px);
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
 }
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Botones */
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+table th {
+    background: rgba(0,198,255,0.3);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+table tr:hover {
+    background: rgba(0,198,255,0.2);
+    transition: 0.3s;
+}
+
+/* Link de volver */
+a.volver {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a.volver:hover {
+    color: #ff9999;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+

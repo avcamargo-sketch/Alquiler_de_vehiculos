@@ -5,7 +5,16 @@ $result = mysqli_query($conn, "SELECT * FROM clientes");
 if (!$result) {
     die("Error en la consulta: " . mysqli_error($conn));
 }
-
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Clientes</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<?php
 echo "<h1>Listado de Clientes</h1>";
 echo "<table border='1'>
         <tr>
@@ -28,4 +37,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 echo "</table>";
 echo "<br><br><a href='../index.php' class='boton-volver'>Volver al menú principal</a>";
 ?>
+</body>
+</html>
 
