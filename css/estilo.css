@@ -5,7 +5,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fondo con gradiente morado, rojo y azul */
+
 body {
   background: linear-gradient(135deg, #1e3c72, #6a11cb, #b31217);
   background-size: 400% 400%;
@@ -17,14 +17,14 @@ body {
   align-items: center;
 }
 
-/* Animación del fondo */
+
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Encabezado */
+
 header {
   width: 100%;
   padding: 20px;
@@ -42,7 +42,7 @@ header h1 {
   letter-spacing: 2px;
 }
 
-/* Navegación */
+
 nav {
   margin: 20px 0; width: 100%;
   display: flex;
@@ -69,7 +69,7 @@ nav ul li a {
   transition: all 0.4s ease;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 
-  /* Para íconos */
+
   display: flex;
   align-items: center;
   gap: 8px;
@@ -84,7 +84,7 @@ nav ul li a:hover {
   background: linear-gradient(45deg, #ff416c, #6a11cb, #2575fc);
 }
 
-/* Contenedor principal */
+
 main {
   width: 90%;
   max-width: 1000px;
@@ -96,7 +96,7 @@ main {
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Tablas elegantes */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -126,7 +126,6 @@ table tr:hover {
   background: rgba(255,255,255,0.15);
 }
 
-/* Formularios */
 form {
   display: flex;
   flex-direction: column;
@@ -164,7 +163,6 @@ button:hover {
   transform: scale(1.08);
 }
 
-/* Link de volver */
 a.volver {
    display: block;
   margin: 40px auto 0;
@@ -179,8 +177,6 @@ a.volver {
   width: fit-content;
   transition: all 0.4s ease;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-
-  /* Animación para destacar */
   animation: pulse 2s infinite
 }
 
@@ -189,14 +185,13 @@ a.volver:hover {
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
-/* Animación de pulso */
+
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 
-/* Footer */
 footer {
   width: 100%;
   text-align: center;
