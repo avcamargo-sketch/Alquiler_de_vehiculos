@@ -6,7 +6,7 @@ include("includes/conexion.php");
 <head>
     <meta charset="UTF-8">
     <title>Gestor de Alquiler de Vehículos</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="views/">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>

@@ -16,7 +16,7 @@ if (!$vehiculos) {
 <head>
     <meta charset="UTF-8">
     <title>Crear Reserva</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../views/estilo.css">
 </head>
 <body>
     <h1>Crear Reserva</h1>

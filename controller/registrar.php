@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Registrar Cliente</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../views/estilo.css">
 </head>
 <body>
     <h1>Registrar Cliente</h1>

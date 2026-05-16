@@ -11,7 +11,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <title>Listado de Clientes</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../views/estilo.css">
 </head>
 <body>
 <?php

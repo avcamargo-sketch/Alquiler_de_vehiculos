@@ -16,7 +16,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <title>Historial de Reservas</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../views/estilo.css">
 </head>
 <body>
 <?php
